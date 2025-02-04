@@ -1,0 +1,27 @@
+{
+  "name": "asistente-de-viajes",
+  "version": "1.0.0",
+  "description": "chatbot que asiste a los usuarios en la planificacion de un viaje",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tsconfig/node23": "^23.0.0",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.0",
+    "eslint": "^9.19.0",
+    "prettier": "^3.4.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}
