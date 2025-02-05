@@ -9,6 +9,7 @@ interface WeatherResponse {
   temperature?: number;
   condition?: string;
   location?: string;
+  date?: string;
 }
 
 interface FlightsResponse {

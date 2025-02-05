@@ -7,7 +7,7 @@ import {
   LLMResponse,
 } from "@/types/state.js";
 
-export const GraphAnnotation = Annotation.Root({
+export const StateAnnotation = Annotation.Root({
   messages: Annotation<BaseMessage[], BaseMessageLike[]>({
     reducer: messagesStateReducer,
     default: () => [],
@@ -36,5 +36,3 @@ export const GraphAnnotation = Annotation.Root({
     default: () => ({}),
   }),
 });
-
-export default GraphAnnotation;

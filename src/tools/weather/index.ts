@@ -26,5 +26,6 @@ export const getFutureWeather = async (
     temperature: data.forecast.forecastday[0].day.avgtemp_c,
     condition: data.forecast.forecastday[0].day.condition.text,
     location: data.location.name,
+    date: formattedDate,
   };
 };
