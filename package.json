@@ -4,7 +4,7 @@
   "description": "chatbot que asiste a los usuarios en la planificacion de un viaje",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch src/server.ts",
+    "dev": "tsx watch --tsconfig-paths src/server.ts",
     "build": "tsc"
   },
   "type": "module",
@@ -13,6 +13,7 @@
   "license": "ISC",
   "devDependencies": {
     "@tsconfig/node23": "^23.0.0",
+    "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
     "@types/node": "^22.13.0",
     "eslint": "^9.19.0",
@@ -24,8 +25,10 @@
     "@langchain/anthropic": "^0.3.12",
     "@langchain/core": "^0.3.37",
     "@langchain/langgraph": "^0.2.44",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "tsconfig-paths": "^4.2.0",
     "zod": "^3.24.1"
   }
 }
