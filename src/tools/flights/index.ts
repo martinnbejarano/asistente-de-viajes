@@ -2,6 +2,7 @@ import {
   FlightLocationResponse,
   FlightSearchResponse,
 } from "@/tools/flights/types.js";
+import { FlightsResponse } from "@/types/state.js";
 
 const getFlightLocation = async (query: string): Promise<string> => {
   const response = await fetch(
@@ -26,7 +27,7 @@ export const getFlightPrice = async (
   to: string,
   departDate: Date,
   returnDate: Date
-): Promise<FlightSearchResponse> => {
+): Promise<FlightsResponse> => {
   const [fromId, toId] = await Promise.all([
     getFlightLocation(from),
     getFlightLocation(to),
@@ -43,5 +44,12 @@ export const getFlightPrice = async (
     }
   );
   const data = (await response.json()) as FlightSearchResponse;
-  return data;
+
+  return {
+    origin: data.data[0].searchDates[0],
+    destination: data.data[0].searchDates[1],
+    price: data.data[0].price.units,
+    departureDate: data.data[0].departureDate,
+    returnDate: data.data[0].returnDate,
+  };
 };
